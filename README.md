@@ -11,3 +11,14 @@ FAST DDS Guide:
 
 Link .so lib cmake:
 * https://stackoverflow.com/questions/8774593/cmake-link-to-external-library
+
+
+Exports and imports of libraries:
+* https://cmake.org/cmake/help/git-stage/guide/importing-exporting/index.html
+
+Path:
+* /opt/ros/foxy/share/fastrtps/cmake
+
+
+Library linking 2:
+*  https://stackoverflow.com/questions/41244132/add-library-to-cmake-project

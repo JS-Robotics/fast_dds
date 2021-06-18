@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sondre/fast_rtps_ws/project
+CMAKE_SOURCE_DIR = /home/sondre/fast_dds/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sondre/fast_rtps_ws/project/build
+CMAKE_BINARY_DIR = /home/sondre/fast_dds/project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sondre/fast_rtps_ws/project/build/CMakeFiles /home/sondre/fast_rtps_ws/project/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sondre/fast_dds/project/build/CMakeFiles /home/sondre/fast_dds/project/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sondre/fast_rtps_ws/project/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sondre/fast_dds/project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named DDSHelloWorldSubscriber
-
-# Build rule for target.
-DDSHelloWorldSubscriber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 DDSHelloWorldSubscriber
-.PHONY : DDSHelloWorldSubscriber
-
-# fast build rule for target.
-DDSHelloWorldSubscriber/fast:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/build
-.PHONY : DDSHelloWorldSubscriber/fast
-
-#=============================================================================
 # Target rules for targets named DDSHelloWorldPublisher
 
 # Build rule for target.
@@ -136,13 +123,38 @@ DDSHelloWorldPublisher/fast:
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/build
 .PHONY : DDSHelloWorldPublisher/fast
 
+#=============================================================================
+# Target rules for targets named fastrtps
+
+# Build rule for target.
+fastrtps: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fastrtps
+.PHONY : fastrtps
+
+# fast build rule for target.
+fastrtps/fast:
+	$(MAKE) -f CMakeFiles/fastrtps.dir/build.make CMakeFiles/fastrtps.dir/build
+.PHONY : fastrtps/fast
+
+#=============================================================================
+# Target rules for targets named fastcdr
+
+# Build rule for target.
+fastcdr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fastcdr
+.PHONY : fastcdr
+
+# fast build rule for target.
+fastcdr/fast:
+	$(MAKE) -f CMakeFiles/fastcdr.dir/build.make CMakeFiles/fastcdr.dir/build
+.PHONY : fastcdr/fast
+
 HelloWorld.o: HelloWorld.cxx.o
 
 .PHONY : HelloWorld.o
 
 # target to build an object file
 HelloWorld.cxx.o:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorld.cxx.o
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/HelloWorld.cxx.o
 .PHONY : HelloWorld.cxx.o
 
@@ -152,7 +164,6 @@ HelloWorld.i: HelloWorld.cxx.i
 
 # target to preprocess a source file
 HelloWorld.cxx.i:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorld.cxx.i
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/HelloWorld.cxx.i
 .PHONY : HelloWorld.cxx.i
 
@@ -162,7 +173,6 @@ HelloWorld.s: HelloWorld.cxx.s
 
 # target to generate assembly for a file
 HelloWorld.cxx.s:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorld.cxx.s
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/HelloWorld.cxx.s
 .PHONY : HelloWorld.cxx.s
 
@@ -172,7 +182,6 @@ HelloWorldPubSubTypes.o: HelloWorldPubSubTypes.cxx.o
 
 # target to build an object file
 HelloWorldPubSubTypes.cxx.o:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorldPubSubTypes.cxx.o
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/HelloWorldPubSubTypes.cxx.o
 .PHONY : HelloWorldPubSubTypes.cxx.o
 
@@ -182,7 +191,6 @@ HelloWorldPubSubTypes.i: HelloWorldPubSubTypes.cxx.i
 
 # target to preprocess a source file
 HelloWorldPubSubTypes.cxx.i:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorldPubSubTypes.cxx.i
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/HelloWorldPubSubTypes.cxx.i
 .PHONY : HelloWorldPubSubTypes.cxx.i
 
@@ -192,7 +200,6 @@ HelloWorldPubSubTypes.s: HelloWorldPubSubTypes.cxx.s
 
 # target to generate assembly for a file
 HelloWorldPubSubTypes.cxx.s:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorldPubSubTypes.cxx.s
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/HelloWorldPubSubTypes.cxx.s
 .PHONY : HelloWorldPubSubTypes.cxx.s
 
@@ -223,33 +230,6 @@ HelloWorldPublisher.cpp.s:
 	$(MAKE) -f CMakeFiles/DDSHelloWorldPublisher.dir/build.make CMakeFiles/DDSHelloWorldPublisher.dir/HelloWorldPublisher.cpp.s
 .PHONY : HelloWorldPublisher.cpp.s
 
-HelloWorldSubscriber.o: HelloWorldSubscriber.cpp.o
-
-.PHONY : HelloWorldSubscriber.o
-
-# target to build an object file
-HelloWorldSubscriber.cpp.o:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorldSubscriber.cpp.o
-.PHONY : HelloWorldSubscriber.cpp.o
-
-HelloWorldSubscriber.i: HelloWorldSubscriber.cpp.i
-
-.PHONY : HelloWorldSubscriber.i
-
-# target to preprocess a source file
-HelloWorldSubscriber.cpp.i:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorldSubscriber.cpp.i
-.PHONY : HelloWorldSubscriber.cpp.i
-
-HelloWorldSubscriber.s: HelloWorldSubscriber.cpp.s
-
-.PHONY : HelloWorldSubscriber.s
-
-# target to generate assembly for a file
-HelloWorldSubscriber.cpp.s:
-	$(MAKE) -f CMakeFiles/DDSHelloWorldSubscriber.dir/build.make CMakeFiles/DDSHelloWorldSubscriber.dir/HelloWorldSubscriber.cpp.s
-.PHONY : HelloWorldSubscriber.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,8 +238,9 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... DDSHelloWorldSubscriber"
 	@echo "... DDSHelloWorldPublisher"
+	@echo "... fastrtps"
+	@echo "... fastcdr"
 	@echo "... HelloWorld.o"
 	@echo "... HelloWorld.i"
 	@echo "... HelloWorld.s"
@@ -269,9 +250,6 @@ help:
 	@echo "... HelloWorldPublisher.o"
 	@echo "... HelloWorldPublisher.i"
 	@echo "... HelloWorldPublisher.s"
-	@echo "... HelloWorldSubscriber.o"
-	@echo "... HelloWorldSubscriber.i"
-	@echo "... HelloWorldSubscriber.s"
 .PHONY : help
 
 

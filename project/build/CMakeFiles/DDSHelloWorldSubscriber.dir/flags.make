@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =   -std=c++11
 
-CXX_DEFINES = -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=6 -DFOONATHAN_MEMORY_VERSION_PATCH=2
+CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /opt/ros/foxy/include -isystem /opt/ros/foxy/include/foonathan_memory/comp -isystem /opt/ros/foxy/include/foonathan_memory 
+CXX_INCLUDES = -I/home/sondre/fast_dds/project/Fast-DDS/include 
 
